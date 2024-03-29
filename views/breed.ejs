@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head") %>
+<body>
+    <main>
+
+        <%- include("./partials/search") %>        
+
+        <% if(Object.keys(data).length > 0) { %>
+            <div class="output">
+                <h1>Here's all the cute <%=name%> pictures for you</h1>
+                <% data.forEach((dog) => { %>
+                    <img src="<%=dog%>">  
+                <% }) %>
+                                
+            </div>
+        <% } %>
+
+    </main>
+
+</body>
+</html>

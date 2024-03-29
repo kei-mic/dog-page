@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head") %>
+<body>
+    <main>
+        <%- include("./partials/search") %>        
+
+        <% if(Object.keys(data).length > 0) { %>
+            <div class="output">
+                <h2>Here's a cute <%=name%> for you</h2>
+                <img src="<%=data.message%>">     
+                <a href="/breed/<%=name.toLowerCase()%>" id="more">See More <%=name%>s</a>  
+              
+            </div>
+        <% } %>
+
+    </main>
+
+</body>
+</html>
